@@ -19,10 +19,22 @@
 		Design78
     </author>
 
-
+<!--android -->
 <feature name="Geolocation">
     <param name="android-package" value="org.apache.cordova.GeoBroker" />
 </feature>
+
+<!--windows -->
+<Capabilities>
+    <Capability Name="ID_CAP_LOCATION" />
+</Capabilities>
+
+<!-- ios-->
+<feature name="Geolocation">
+    <param name="ios-package" value="CDVLocation" />
+</feature>
+
+
 
 
 
