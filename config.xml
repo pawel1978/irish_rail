@@ -19,8 +19,10 @@
 
      <!--
       This allows your app to load assets from all *.phongap.com domains
+         <access origin="http://www.design78.net" subdomains="true" />
     -->
-   <access origin="*" />
+ 
+<access origin="*" />
    
 
     <preference name="phonegap-version" value="2.9.0" />
