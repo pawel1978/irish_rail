@@ -28,7 +28,11 @@
 -->
 
 <gap:config-file platform="android" parent="/manifest">
-    <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
 </gap:config-file>
 
 
