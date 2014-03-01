@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Irish Rail Realtime Information</title>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+ <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+
+
+
+  <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+
+         var latitude = position.coords.latitude ;
+         var longitude = position.coords.longitude ;
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    }
+
+
+function get_current_station(latitude, longitude){
+var tekst = '<iframe id="frame_bottom" src="http://www.design78.net/irish_rail/mobile.php?latitude='+ latitude +'&longitude='+ longitude +'"></iframe>';
+$("#frame").html(tekst);
+}
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!-- external style css -->
+<link rel="stylesheet" type="text/css" href="http://www.design78.net/irish_rail/css/style.css">
+</head>
+<body>
+
+
+<a class="bth btn-default" href="#" onclick="conTest()">Test connection </a>
+
+
+</body>
+</html>
