@@ -95,7 +95,7 @@ header h1 small {
 }
 
 #button-exit:hover{
-  background: #000;
+  background: #006600;
 }
 
 #reload-geo{
@@ -108,7 +108,7 @@ header h1 small {
   background: green;
 }
 #reload-geo:hover{
-  background: #000;
+  background: #006600;
 }
 
 iframe{
