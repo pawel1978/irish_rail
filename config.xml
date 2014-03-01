@@ -25,17 +25,6 @@
 </feature>
 -->
 
-<!--windows -->
-<Capabilities>
-    <Capability Name="ID_CAP_LOCATION" />
-</Capabilities>
-
-<!-- ios-->
-<feature name="Geolocation">
-    <param name="ios-package" value="CDVLocation" />
-</feature>
-
-
 
 
 
