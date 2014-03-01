@@ -23,6 +23,7 @@
     // Cordova is ready
     //
     function onDeviceReady() {
+        $("#frame").html('<h2 class="aquiring">Aquiring Geo Location...</h2>');
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
