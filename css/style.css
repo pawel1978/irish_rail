@@ -75,7 +75,7 @@ header h1 small {
   right: 0px;
   width:100%;
   background-color: #333;
-  height: 40px;
+  height: 45px;
   color: #fff;
   font-size: 17px;
 }
@@ -87,19 +87,29 @@ header h1 small {
 #button-exit{
   background: none;
   border: none;
+  padding:10px;
   position: fixed;
-  bottom: 5px;
-  right: 5px;
+  bottom: 0px;
+  right: 0px;
+  background: green;
+}
+
+#button-exit:hover{
+  background: #000;
 }
 
 #reload-geo{
    background: none;
   border: none;
   position: fixed;
-  bottom: 5px;
-  left: 5px; 
+    padding:10px;
+  bottom: 0px;
+  left: 0px;
+  background: green;
 }
-
+#reload-geo:hover{
+  background: #000;
+}
 
 iframe{
   width:100%;
