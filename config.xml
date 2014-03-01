@@ -23,17 +23,25 @@
 <feature name="Geolocation">
     <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
 </feature>
+<plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+
 
 
 <!--windows -->
 <Capabilities>
     <Capability Name="ID_CAP_LOCATION" />
 </Capabilities>
+<plugin name="Geolocation" value="CDVLocation" />
+
 
 <!-- ios-->
 <feature name="Geolocation">
     <param name="ios-package" value="CDVLocation" />
 </feature>
+<Capabilities>
+    <Capability Name="ID_CAP_LOCATION" />
+</Capabilities>
+
 
 
 
