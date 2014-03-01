@@ -5,8 +5,6 @@
         versionCode="10" 
         version   = "1.0.0">
 
-  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
       
 
     <!-- versionCode is optional and Android only -->
@@ -26,11 +24,11 @@
          <access origin="http://www.design78.net" subdomains="true" />
     -->
 
-<supports-screens android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" android:resizeable="true" android:anyDensity="true" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+
+<uses-permission name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+<uses-permission name="android.permission.ACCESS_NETWORK_STATE" /> 
 <!--
 <uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.VIBRATE" />
