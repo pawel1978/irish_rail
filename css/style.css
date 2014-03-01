@@ -77,6 +77,12 @@ iframe{
 }
 
 
+#button-exit{
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+}
+
 
 @media all and (max-width: 699px) {
   body {

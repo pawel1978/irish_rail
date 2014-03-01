@@ -32,7 +32,7 @@
 
          var latitude = position.coords.latitude ;
          var longitude = position.coords.longitude ;
-         alert('latitude: '+latitude+' longitude: '+longitude);
+      //   alert('latitude: '+latitude+' longitude: '+longitude);
          get_current_station(latitude, longitude);
     }
 
@@ -78,7 +78,7 @@ $("#frame").html(tekst);
 <body>
 
 
-<button id="button-exit" name="buttonClick" onclick="exitFromApp()">EXIT APPLICATION</button>
+<button id="button-exit" class="btn btn-primary" name="buttonClick" onclick="exitFromApp()">EXIT APPLICATION</button>
 
 <div id="frame"></div>
 
