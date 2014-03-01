@@ -9,8 +9,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
- <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 
 
 
@@ -46,7 +45,8 @@
 
 
 function get_current_station(latitude, longitude){
-var tekst = '<iframe id="frame_bottom" src="http://www.design78.net/irish_rail/mobile.php?latitude='+ latitude +'&longitude='+ longitude +'"></iframe>';
+var height = $( window ).height();
+var tekst = '<iframe id="frame_bottom" style="width:100%;height:'+ height +'px;" src="http://www.design78.net/irish_rail/mobile.php?latitude='+ latitude +'&longitude='+ longitude +'"></iframe>';
 $("#frame").html(tekst);
 }
 
@@ -57,13 +57,9 @@ $("#frame").html(tekst);
              }
 
 
-//set iframe size
-
-var height = $( window ).height();
-var height = height  
-$("#frame").css('min-height', height);
-$("#frame").css('width', '100%');
     </script>
+
+
 
 
 

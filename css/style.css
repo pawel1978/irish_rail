@@ -70,6 +70,13 @@ footer {
   margin-top: 50px;
 }
 
+
+iframe{
+  width:100%;
+}
+
+
+
 @media all and (max-width: 699px) {
   body {
     background-color: #fff;
