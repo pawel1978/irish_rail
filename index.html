@@ -50,7 +50,18 @@ $("#frame").html(tekst);
 }
 
 
+     function exitFromApp()
+             {
+                navigator.app.exitApp();
+             }
 
+
+//set iframe size
+
+var height = $( window ).height();
+var height = height  
+$("#frame").css('min-height', height);
+$("#frame").css('width', '100%');
     </script>
 
 
@@ -70,7 +81,7 @@ $("#frame").html(tekst);
 <body>
 
 
-<a class="bth btn-default" href="#" onclick="conTest()">Test connection </a>
+<button id="button-exit" name="buttonClick" onclick="exitFromApp()">EXIT APPLICATION</button>
 
 <div id="frame"></div>
 
