@@ -23,8 +23,13 @@
     //
     function onDeviceReady() {
         $("#frame").html('<h2 class="aquiring">Aquiring Geo Location...</h2>');
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+     //   navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+        //check if internet conection exist
+        checkConnection();
+
+
+     //..end on device ready
     }
 
 
@@ -32,7 +37,8 @@
 // when reload is press
     function reloadGeo() {
         $("#frame").html('<h2 class="aquiring">Aquiring Geo Location...</h2>');
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+     //   navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        checkConnection();
     }
 
 ////////////
@@ -69,6 +75,41 @@ $("#frame").html(tekst);
              {
                 navigator.app.exitApp();
              }
+
+
+
+
+     function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN] = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI] = 'WiFi connection';
+            states[Connection.CELL_2G] = 'Cell 2G connection';
+            states[Connection.CELL_3G] = 'Cell 3G connection';
+            states[Connection.CELL_4G] = 'Cell 4G connection';
+            states[Connection.CELL] = 'Cell generic connection';
+            states[Connection.NONE] = 'No network connection';
+          
+
+           if(states[networkState]== 'No network connection' || states[networkState] == 'Cell generic connection'
+           || states[networkState] == 'Unknown connection' ){
+             //jesli nie ma polaczenia
+           // alert(states[networkState]);
+           //  window.location="no_conection.html";
+             $("#frame").html('<h2 class="aquiring" style="color: red;">You need internet access to use this app</h2>');
+            }else{
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+           //  alert(states[networkState]);   
+            
+             //jesli jest polaczenie
+           // window.location.href = 'http://www.pawelj.cal.pl';
+            }
+            
+         ///////////////////////////////////
+        }          
 
 
     </script>
