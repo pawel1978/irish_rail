@@ -24,7 +24,19 @@
     function onDeviceReady() {
         $("#frame").html('<h2 class="aquiring">Aquiring Geo Location...</h2>');
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+/////////////
+// when reload is press
+    function reloadGeo() {
+        $("#frame").html('<h2 class="aquiring">Aquiring Geo Location...</h2>');
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
+
+////////////
+    }
+
+
+
 
     // onSuccess Geolocation
     //
@@ -46,7 +58,8 @@
 
 function get_current_station(latitude, longitude){
 var height = $( window ).height();
-var tekst = '<iframe id="frame_bottom" style="width:100%;height:'+ height +'px;" src="http://www.design78.net/irish_rail/mobile.php?latitude='+ latitude +'&longitude='+ longitude +'"></iframe>';
+var height2 = height - 42;
+var tekst = '<iframe id="frame_bottom" style="width:100%;height:'+ height2 +'px;" src="http://www.design78.net/irish_rail/mobile.php?latitude='+ latitude +'&longitude='+ longitude +'"></iframe>';
 $("#frame").html(tekst);
 }
 
@@ -78,9 +91,21 @@ $("#frame").html(tekst);
 <body>
 
 
-<button id="button-exit" class="btn btn-primary" name="buttonClick" onclick="exitFromApp()">EXIT APPLICATION</button>
+
 
 <div id="frame"></div>
+
+<div id="footer">
+
+<button id="reload-geo" name="reload-geo" onclick="reloadGeo()">
+RELOAD GEOLOCATION  <span class="glyphicon glyphicon-globe"></span>
+</button>
+
+<button id="button-exit" name="buttonClick" onclick="exitFromApp()">
+EXIT <span class="glyphicon glyphicon-off"></span>
+</button>
+
+</div>
 
 
 </body>
