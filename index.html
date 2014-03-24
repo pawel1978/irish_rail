@@ -18,10 +18,12 @@
     // Wait for Cordova to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
+    
 
     // Cordova is ready
     //
     function onDeviceReady() {
+    	document.addEventListener("menubutton", onMenuKeyDown, false);
         $("#frame").html('<h2 class="aquiring">Aquiring Geo Location...</h2>');
      //   navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
@@ -31,7 +33,11 @@
 
      //..end on device ready
     }
-
+    
+    function onMenuKeyDown() {
+    // alert('test menu');
+     navigator.app.exitApp();
+    }
 
 /////////////
 // when reload is press
